@@ -3,9 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/gin-gonic/gin"
 	"event-registration-api/internal/db"
 	"event-registration-api/internal/event"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -14,8 +15,6 @@ func main() {
 	}
 
 	r := gin.Default()
-
 	event.RegisterRoutes(r)
-
 	r.Run(":8080")
 }

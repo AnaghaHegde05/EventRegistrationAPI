@@ -1,5 +1,6 @@
 package event
 
+// CreateNewEvent is unchanged
 func CreateNewEvent(name string, seats int) error {
 	return CreateEvent(Event{
 		Name:       name,
@@ -7,6 +8,7 @@ func CreateNewEvent(name string, seats int) error {
 	})
 }
 
-func Register(eventID int) error {
-	return RegisterForEvent(eventID)
+// Register now accepts a userEmail
+func Register(eventID int, userEmail string) error {
+	return RegisterForEventWithUser(eventID, userEmail)
 }
